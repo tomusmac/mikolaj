@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 14 Gru 2022, 23:06
+-- Czas generowania: 16 Gru 2022, 12:49
 -- Wersja serwera: 10.4.25-MariaDB
 -- Wersja PHP: 8.1.10
 
@@ -30,30 +30,43 @@ SET time_zone = "+00:00";
 CREATE TABLE `listy` (
   `id` int(11) NOT NULL,
   `wlasciciel` text NOT NULL,
-  `tresc` text NOT NULL
+  `tresc` text NOT NULL,
+  `wiek` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Zrzut danych tabeli `listy`
 --
 
-INSERT INTO `listy` (`id`, `wlasciciel`, `tresc`) VALUES
-(178, 'Tomek', 'chce prezent'),
-(179, 'Tomek', 'asdasds'),
-(180, 'Tomek', 'asdasds'),
-(181, 'Tomek', 'asdasds'),
-(182, 'Tomek', 'asdasds'),
-(183, 'Tomek', 'asdasds'),
-(184, 'sds', 'sdds'),
-(185, 'sds', 'sdds'),
-(186, 'sds', 'sdds'),
-(187, 'xcxc', 'sdsd'),
-(188, 'xcxc', 'sdsd'),
-(189, 'xcxc', 'sdsd'),
-(190, 'xcxc', 'sdsd'),
-(191, 'xcxc', 'sdsd'),
-(192, 'xcxc', 'sdsd'),
-(193, 'xcxc', 'sdsd');
+INSERT INTO `listy` (`id`, `wlasciciel`, `tresc`, `wiek`) VALUES
+(178, 'Tomek', 'chce prezent', ''),
+(179, 'Tomek', 'asdasds', ''),
+(180, 'Tomek', 'asdasds', ''),
+(181, 'Tomek', 'asdasds', ''),
+(182, 'Tomek', 'asdasds', ''),
+(183, 'Tomek', 'asdasds', ''),
+(184, 'sds', 'sdds', ''),
+(185, 'sds', 'sdds', ''),
+(186, 'sds', 'sdds', ''),
+(187, 'xcxc', 'sdsd', ''),
+(188, 'xcxc', 'sdsd', ''),
+(189, 'xcxc', 'sdsd', ''),
+(190, 'xcxc', 'sdsd', ''),
+(191, 'xcxc', 'sdsd', ''),
+(192, 'xcxc', 'sdsd', ''),
+(193, 'xcxc', 'sdsd', ''),
+(194, 'das', 'sad', ''),
+(195, 'das', 'sad', ''),
+(196, 'das', 'sad', ''),
+(197, 'das', 'sad', ''),
+(198, 'das', 'sad', ''),
+(199, 'das', 'sad', ''),
+(200, 'das', 'sad', ''),
+(201, 'das', 'sad', ''),
+(202, 'das', 'sad', ''),
+(203, 'das', 'sad', ''),
+(204, 'das', 'sad', ''),
+(205, 'das', 'sad', '');
 
 -- --------------------------------------------------------
 
@@ -108,7 +121,7 @@ ALTER TABLE `prezenty`
 -- AUTO_INCREMENT dla tabeli `listy`
 --
 ALTER TABLE `listy`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=194;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=206;
 
 --
 -- AUTO_INCREMENT dla tabeli `prezenty`

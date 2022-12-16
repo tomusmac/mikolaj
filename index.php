@@ -13,14 +13,16 @@
   <form action="#" method="post">
 
   <input type="text" id="imie" placeholder="Twoje imię" name="imie"><br>
+  <input type="number" id="wiek" placeholder="Twój wiek" name="wiek"><br><br>
   <input type="text" id="tresc" placeholder="Treść listu do świętego mikołaja" name="tresc"><br><br>
   <input id="button" type="submit" value="Wyślij">
   <?php
 if (!empty($_POST["tresc"]) && !empty($_POST["imie"])) {
     $tresc = $_POST["tresc"];
     $imie = $_POST["imie"];
+    $wiek = $_POST["wiek"];
     $conn = mysqli_connect("localhost", "root", "", "mikolaj");
-    $query = "INSERT INTO `listy` (`id`, `wlasciciel`, `tresc`) VALUES (NULL, '$imie', '$tresc');";
+    $query = "INSERT INTO `listy` (`id`, `wlasciciel`, `tresc`, `wiek`) VALUES (NULL, '$imie', '$tresc', '$wiek');";
     mysqli_query($conn,$query);
     $id = rand(1,10);
     $query = "SELECT * FROM `prezenty` where id='$id';";
